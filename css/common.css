@@ -1,0 +1,348 @@
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p,
+span {
+  line-height: 1;
+}
+/*@baseFontSize: 75;//基于视觉稿横屏尺寸/100得出的基准font-size
+.px2rem(@name, @px){
+    @{name}: @px / @baseFontSize * 1rem;
+}*/
+a {
+  color: #0c2340;
+}
+a:hover {
+  color: #00abeb !important;
+}
+header {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 555;
+  background: #fff;
+}
+header .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+header .content .logo-box {
+  height: 100%;
+  padding: 0 60px;
+}
+header .content .logo-box .logo {
+  width: 104px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+header .content .logo-box .logo img {
+  width: 100%;
+  height: auto;
+}
+header .content .menu-box {
+  flex: 1;
+}
+header .content .menu-box li {
+  display: flex;
+  padding: 0 30px;
+  height: 100%;
+  flex-direction: column;
+  float: left;
+  cursor: pointer;
+  justify-content: center;
+  position: relative;
+  font-size: 16px;
+}
+header .content .menu-box li .li-div {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 70px;
+  display: none;
+}
+header .content .menu-box .li-active {
+  color: #00abeb !important;
+}
+header .content .hamburger {
+  width: 70px;
+  height: 70px;
+  display: none;
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+}
+header .content .hamburger .iconfont-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .content .hamburger .iconfont-box .iconfont {
+  font-size: 30px;
+}
+header .mobile-menu {
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+header .mobile-menu .menu-title {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #f2f1f0;
+}
+header .mobile-menu .menu-title .menu-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  margin-left: auto;
+}
+header .mobile-menu .menu-title .menu-close .iconfont {
+  font-size: 30px;
+}
+header .mobile-menu .mobile-menu-box {
+  height: calc(100% - 70px);
+  overflow: auto;
+}
+header .mobile-menu .mobile-menu-box .menu-item {
+  font-size: 18px;
+  color: #333;
+  min-height: 70px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  padding: 0 40px 0 20px;
+  border-bottom: .5px solid #f2f1f0;
+  position: relative;
+  cursor: pointer;
+}
+header .mobile-menu .mobile-menu-box .menu-item .triangle {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+header .mobile-menu .mobile-menu-box .menu-item .triangle .iconfont {
+  font-size: 20px;
+}
+header .mobile-menu-transform {
+  animation: navTransform 0.5s ease forwards;
+}
+@keyframes navTransform {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+section {
+  width: 100%;
+  margin-top: 70px;
+}
+section .small-banner,
+section .partner {
+  width: 100%;
+  height: 270px;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .small-banner span,
+section .partner span {
+  font-size: 32px;
+  color: #fff;
+}
+section .small-nav {
+  text-align: center;
+  height: 40px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .small-nav li {
+  cursor: pointer;
+  padding: 0 15px;
+  color: #333;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+section .small-nav li:hover {
+  color: #00abeb !important;
+}
+section .small-nav .li-active {
+  border-bottom: 2px solid #00abeb;
+  color: #00abeb !important;
+}
+footer {
+  background: #20262c;
+  width: 100%;
+  color: #fff;
+  padding: 20px 50px 20px;
+}
+footer .top {
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fff;
+  /*   .item-icon{
+      .iconfont{
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 10px;
+        position: relative;
+        .iconfont-account{
+          display: none;
+          position: absolute;
+          top:-40px;
+          left:-50px;
+          font-size: 12px;
+          padding: 6px 20px;
+          background: #fff;
+          border-radius: 2px;
+          color: @fontColor;
+        }
+      }
+
+    }*/
+}
+footer .top .item {
+  width: 33%;
+  display: inline-block;
+}
+footer .top .item li {
+  padding: 10px 0;
+}
+footer .top .item li a {
+  color: #fff;
+}
+footer .top .item:last-child {
+  width: 50%;
+}
+footer .bottom {
+  padding-top: 20px;
+}
+footer .bottom .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .bottom .logo img {
+  width: 104px;
+}
+footer .bottom .logo .address {
+  margin-top: 20px;
+}
+footer .bottom .item-icon {
+  margin-top: 20px;
+}
+footer .bottom .item-icon li {
+  display: inline-block;
+}
+footer .bottom .item-icon .iconfont {
+  font-size: 24px;
+  vertical-align: middle;
+}
+footer .bottom .item-icon .iconfont-account {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.swiper-pagination-white {
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  opacity: 1;
+}
+.back-to-top {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  width: 40px ;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  z-index: 555;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.back-to-top .iconfont {
+  font-size: 20px;
+}
+@media screen and (max-width: 1023px) {
+  header .logo-box {
+    padding: 0 20px !important;
+  }
+  header .menu-box {
+    display: none;
+  }
+  header .hamburger {
+    display: block !important;
+  }
+  footer .top .item {
+    width: 100% !important;
+  }
+  footer .top .item:last-child {
+    text-align: left;
+  }
+  footer .bottom li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  section .small-nav li {
+    margin: 0 !important;
+  }
+}

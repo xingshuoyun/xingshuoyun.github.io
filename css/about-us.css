@@ -1,0 +1,51 @@
+.small-banner {
+  background-image: url("../img/about_us/img-gy-banner.png");
+}
+.about-us-title {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 60px;
+}
+.about-us-content {
+  width: 1200px;
+  margin: 20px auto;
+  font-size: 16px;
+  line-height: 40px;
+  text-indent: 2em;
+  text-align: justify;
+}
+.partner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+  height: 336px;
+  color: #fff;
+  background-image: url("../img/bg_partner.png");
+}
+.partner .big-title {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.partner .small-title {
+  line-height: 30px;
+}
+.partner .partner-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #00abeb;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.partner .partner-btn:hover {
+  opacity: 0.9;
+}
+@media screen and (max-width: 1023px) {
+  .about-us-content {
+    padding: 30px 40px;
+    width: 100% !important;
+    word-break: break-word;
+    line-height: 30px !important;
+  }
+}
