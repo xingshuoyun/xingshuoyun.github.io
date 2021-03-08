@@ -19,7 +19,7 @@ body section .banner .swiper-container .swiper-slide .font {
   left: 0;
 }
 body section .banner .swiper-container .swiper-slide .font .big-title {
-  font-size: 50px;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 body section .banner .swiper-container .swiper-slide .font span {
@@ -58,6 +58,11 @@ body section .video img {
 }
 body section .video .video-content {
   text-align: justify;
+  font-size: 14px;
+}
+body section .video .video-content p {
+  text-indent: 2em;
+  font-size: 14px;
   line-height: 25px;
 }
 @keyframes fadeIn {

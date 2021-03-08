@@ -10,9 +10,13 @@
   width: 1200px;
   margin: 20px auto;
   font-size: 16px;
-  line-height: 40px;
   text-indent: 2em;
   text-align: justify;
+}
+.about-us-content p {
+  text-indent: 2em;
+  line-height: 40px;
+  font-size: 16px;
 }
 .partner {
   display: flex;
