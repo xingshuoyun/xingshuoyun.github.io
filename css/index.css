@@ -47,16 +47,17 @@ body section .video {
   width: 1200px;
   margin: 0 auto;
   padding: 60px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  /*      display: flex;
+      align-items: center;
+      justify-content: space-between;*/
   animation: fadeIn 3s ease-in;
 }
-body section .video img {
-  width: 600px;
-  margin-right: 50px;
+body section .video video {
+  width: 800px;
 }
 body section .video .video-content {
+  margin-top: 30px;
   text-align: justify;
   font-size: 14px;
 }
@@ -177,12 +178,12 @@ body section .cooperation .logo-box li img {
     display: block !important;
     text-align: center;
   }
-  .video img {
-    width: 60% !important;
+  .video video {
+    width: 95% !important;
     margin: 0 auto !important;
   }
   .video .video-content {
-    padding: 30px 40px;
+    padding: 0 40px 30px;
     width: 100% !important;
     word-break: break-word;
   }
